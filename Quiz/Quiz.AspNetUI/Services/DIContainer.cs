@@ -7,6 +7,9 @@ namespace Quiz.AspNetUI.Services;
 
 internal static class DiContainer
 {
+    /// <summary>
+    /// Adds dependency injection to the collection service.
+    /// </summary>
     internal static void AddQuizDependencyInjection(this IServiceCollection services)
     {
         services.AddDbContext<QuizDbContext>(options => { options.UseInMemoryDatabase("QuizDb"); });
