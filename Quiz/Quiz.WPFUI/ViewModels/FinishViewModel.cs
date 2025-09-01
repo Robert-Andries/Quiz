@@ -29,6 +29,9 @@ public class FinishViewModel : BaseViewModel
     #endregion
     
     #region Methods
+    /// <summary>
+    /// Creates the final message to be displayed to the user based on their quiz performance.
+    /// </summary>
     private void CreateFinalMessage()
     {
         FinalMessage = "Congratulations! You've completed the quiz.\n" +

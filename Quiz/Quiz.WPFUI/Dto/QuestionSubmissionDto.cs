@@ -2,6 +2,9 @@
 
 namespace Quiz.WPFUI.Dto;
 
+/// <summary>
+/// Data Transfer Object representing a question submission option.
+/// </summary>
 public class QuestionSubmissionDto : ObservableObject
 {
     private string _optionText;

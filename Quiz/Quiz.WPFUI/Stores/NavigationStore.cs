@@ -4,6 +4,9 @@ using Quiz.WPFUI.Utilities;
 
 namespace Quiz.WPFUI.Stores;
 
+/// <summary>
+/// Implements navigation between different ViewModels.
+/// </summary>
 public class NavigationStore : ObservableObject, INavigationStore
 {
     private readonly Func<Type, BaseViewModel> _getViewModel;

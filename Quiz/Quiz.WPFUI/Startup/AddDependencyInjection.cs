@@ -7,6 +7,9 @@ namespace Quiz.WPFUI.Startup;
 
 public static class AddDependencyInjection
 {
+    /// <summary>
+    /// Adds the necessary services for quiz functionality to the service collection.
+    /// </summary>
     public static IServiceCollection AddQuizDependencyInjection(this IServiceCollection service)
     {
         service.AddSingleton<DomainLayer.Entities.Quiz>();
