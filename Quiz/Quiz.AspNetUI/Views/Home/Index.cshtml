@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Home/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="topper">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/e1e59f168788131.644e6ddbf3ab9.jpg" alt="..">
+    <div class="texts">
+        <h4>Certification</h4>
+        <h2>Microsoft Certified: Azure Fundamentals</h2>
+        <h3>
+            Demonstrate foundational knowledge of cloud concepts, core Azure services, plus Azure management and
+            governance features and tools.
+        </h3>
+    </div>
+</div>
+<div class="container">
+    <header>
+        <h1>Prepare for Your Azure AZ-900 Exam</h1>
+        <p class="subtitle">Kickstart your cloud journey with the foundational exam.</p>
+    </header>
+
+    <section class="description">
+        <p>Press the below button when you are ready. Make sure you have stabile internet, and good luck!</p>
+    </section>
+
+    <section class="form-section">
+        <form method="get" asp-controller="Quiz" asp-action="Index">
+            <button type="submit">Start Exam</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="logo">
+    <p>© Robert's cool project 2024</p>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,572 @@
+{
+	"question": [
+		{
+			"text": "A company can extend a private cloud by addig its own physical servers to the public cloud",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "To build a hybrid cloud, you must deploy resources to the public cloud",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "A private cloud must be disconnected from the internet",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "A platform as a Service (PaaS) solution that hosts web apps in Azure provides full control of the operating systems that host applications",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "A platform as a Service (PaaS) soulution that hosts web apps in Azure can be provided with additional memory by changing the pricing tier",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "A platform as a Service (PaaS) soulution that hosts web apps in Azure can be configured to automatically scale the number of instances based on demand",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Your company plans to migrate all its data and resources to Azure.The company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure.You need to deploy an Azure environment that meets the company migration plan.\n    Solution: You create Azure virtual machines, Azure SQL databases, and Azure Storage accounts.\n    Does this meet the goal?",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Building a data center infrastructure is an exemple of operational expediture (OpEx) costs",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Monthly salaries for technical personnel are an exemple of operational expenditure (OpEx) costs",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Leasing software is an exemple of operational expediture (OpEx) costs",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "With Software as a Service(SaaS), you must apply software updates",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "With Infrastructure as a Service(IaaS), you must install the software that you want to use",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Azure Backup is an exemple of platform as a Service(PaaS)",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "You can create a resource group inside of another resource group",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "An Azure virtual machine can be in multiple resource groups",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "A resource group can contain resources from multiple Azure regions.",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Microsoft SQL Server 2019 installen on an Azure virtual machine is an exemple of platform as a Service(PaaS)",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Azure SQL Database is an exemple of platform as a Service (PaaS)",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Azure Cosmos DB is an exemple of software as a Service (SaaS)",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Azure Files is an exemple of infrastructure as a Service (IaaS)",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "A DNS server that runs on an Azure virtual machine is an exemple of a platform as a Service(PaaS)",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Microsoft Intune is an exempple of software as a Service(SaaS)",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "Yes",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "Your company is planning to migrate all their virtual machines to an Azure pay-as-you-go subscription. The virtual machines are currently hosted on the Hyper-V hosts in a data center.\n    You are required make sure that the intended Azure solution uses the correct expenditure model.\n    Solution: You should recommend the use of the scalable expenditure model.\n    Does the solution meet the goal?",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "You are required to deploy an Artificial Intelligence (AI) solution in Azure.\n    You want to make sure that you are able to build, test, and deploy predictive analytics for the solution.\n    Solution: You should make use of Azure Cosmos DB.\n    Does the solution meet the goal?",
+			"options": {
+				"option": [
+					"Yes",
+					"No"
+				]
+			},
+			"answer": "No",
+			"_type": "SingleAnswer"
+		},
+		{
+			"text": "You have 50 virtual machines hosted on-premises and 50 virtual machines hosted in Azure. The on-premises virtual machines and the Azure virtual machines connect to each other.\n    Which type of cloud model is this?",
+			"options": {
+				"option": [
+					"Hybrid",
+					"Private",
+					"Public"
+				]
+			},
+			"answer": "Hybrid",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "Your company plans to deploy several custom applications to Azure. The applications will provide invoicing services to the customers of the company. Each application will have several prerequisite applications and services installed.\n    You need to recommend a cloud deployment solution for all the applications.\n    What should you recommend?",
+			"options": {
+				"option": [
+					"Software as a Service (SaaS)",
+					"Platform as a Service (PaaS)",
+					"Infrastructure as a Service (laaS)"
+				]
+			},
+			"answer": "Infrastructure as a Service (laaS)",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "Your company plans to migrate all its data and resources to Azure.\n    The company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure.\n    You need to deploy an Azure environment that meets the company's migration plan.\n    What should you create?",
+			"options": {
+				"option": [
+					"Azure virtual machines, Azure SQL databases, and Azure Storage accounts.",
+					"an Azure App Service and Azure virtual machines that have Microsoft SQL Server installed.",
+					"an Azure App Service and Azure SQL databases.",
+					"Azure storage accounts and web server in Azure virtual machines."
+				]
+			},
+			"answer": "an Azure App Service and Azure SQL databases.",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "What does a customer provide in a software as a Service (SaaS) model?",
+			"options": {
+				"option": [
+					"application data",
+					"data storage",
+					"compute resources",
+					"application software"
+				]
+			},
+			"answer": "application data",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.\n    The company has users that work remotely. The remote workers require access to the VMs on VNet1.\n    You need to provide access for the remote workers.\n    What should you do?",
+			"options": {
+				"option": [
+					"Configure a Site-to-Site (S2S) VPN.",
+					"Configure a VNet-toVNet VPN.",
+					"Configure a Point-to-Site (P2S) VPN.",
+					"Configure DirectAccess on a Windows Server 2012 server VM.",
+					"Configure a Multi-Site VPN"
+				]
+			},
+			"answer": "Configure a Point-to-Site (P2S) VPN.",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "You have an on-premises network that contains several servers.\n    You plan to migrate all the servers to Azure.\n    You need to recommend a solution to ensure that some of the servers are available if a single Azure data center goes offline for an extended period.\n    What should you include in the recommendation?",
+			"options": {
+				"option": [
+					"fault tolerance",
+					"elasticity",
+					"scalability",
+					"low latency"
+				]
+			},
+			"answer": "fault tolerance",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "Your company hosts an accounting application named App1 that is used by all the customers of the company.\n    App1 has low usage during the first three weeks of each month and very high usage during the last week of each month.\n    Which benefit of Azure Cloud Services supports cost management for this type of usage pattern?",
+			"options": {
+				"option": [
+					"high availability",
+					"elasticity",
+					"high latency",
+					"load balancing"
+				]
+			},
+			"answer": "elasticity",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "You plan to migrate a web application to Azure. The web application is accessed by external users.\n    You need to recommend a cloud deployment solution to minimize the amount of administrative effort used to manage the web application.\n    What should you include in the recommendation?",
+			"options": {
+				"option": [
+					"Software as a Service (SaaS)",
+					"Platform as a Service (PaaS)",
+					"Infrastructure as a Service (IaaS)",
+					"Database as a Service (DaaS)"
+				]
+			},
+			"answer": "Platform as a Service (PaaS)",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "You have an on-premises network that contains 100 servers.\n    You need to recommend a solution that provides additional resources to your users. The solution must minimize capital and operational expenditure costs.\n    What should you include in the recommendation?",
+			"options": {
+				"option": [
+					"a complete migration to the public cloud",
+					"an additional data center",
+					"a private cloud",
+					"a hybrid cloud"
+				]
+			},
+			"answer": "a hybrid cloud",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "You plan to migrate several servers from an on-premises network to Azure.\n    What is an advantage of using a public cloud service for the servers over an on-premises network?",
+			"options": {
+				"option": [
+					"The public cloud is owned by the public, NOT a private corporation",
+					"The public cloud is a crowd-sourcing solution that provides corporations with the ability to enhance the cloud",
+					"All public cloud resources can be freely accessed by every member of the public",
+					"The public cloud is a shared entity whereby multiple corporations each use a portion of the resources in the cloud"
+				]
+			},
+			"answer": "The public cloud is a shared entity whereby multiple corporations each use a portion of the resources in the cloud",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": "In which type of cloud model are all the hardware resources owned by a third-party and shared between multiple tenants?",
+			"options": {
+				"option": [
+					"private",
+					"hybrid",
+					"public"
+				]
+			},
+			"answer": "public",
+			"_type": "SingleChoice"
+		},
+		{
+			"text": {
+				"part": [
+					"Azure Cosmos DB is an exemple of a",
+					"offering"
+				]
+			},
+			"options": {
+				"option": [
+					"Infrastructure as a Service(IaaS)",
+					"Platform as a Service (PaaS)",
+					"serverless",
+					"Software as a Service(SaaS)"
+				]
+			},
+			"answer": "Infrastructure as a Service (laaS)",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": {
+				"part": [
+					"A Microsoft SQL Server database that is hosted in the cloud and has software updates managed by Azure is an exemple of",
+					""
+				]
+			},
+			"options": {
+				"option": [
+					"disaster recovery as a Service(DRaaS)",
+					"Platform as a Service (PaaS)",
+					"Infrastructure as a Service(IaaS)",
+					"Software as a Service(SaaS)"
+				]
+			},
+			"answer": "Platform as a Service (PaaS)",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": {
+				"part": [
+					"When you are implementing a Software as a Service (SaaS) solution, you are responsible for",
+					""
+				]
+			},
+			"options": {
+				"option": [
+					"configuring high availability",
+					"defining scalability rules",
+					"installing the SaaS solution",
+					"configuring the SaaS solution"
+				]
+			},
+			"answer": "configuring the SaaS solution",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": {
+				"part": [
+					"An organisation that hosts its infrastructure",
+					"no longer requires a data center"
+				]
+			},
+			"options": {
+				"option": [
+					"in a private cloud",
+					"in a hybrid cloud",
+					"in the public cloud",
+					"on a Hyper-V host"
+				]
+			},
+			"answer": "in the public cloud",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": {
+				"part": [
+					"When planning to migrate a public website to Azure, you must plan to",
+					"no longer requires a data center"
+				]
+			},
+			"options": {
+				"option": [
+					"deploy a VPN.",
+					"pay monthly usage costs.",
+					"pay to transfer all the website data to Azure.",
+					"reduce the number of connection to the website"
+				]
+			},
+			"answer": "pay monthly usage costs.",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": {
+				"part": [
+					"Azure virtual machines:",
+					""
+				]
+			},
+			"options": {
+				"option": [
+					"Infrastructure as a Service(IaaS)",
+					"Platform as a Service(PaaS)",
+					"Software as a Service(SaaS)"
+				]
+			},
+			"answer": "Platform as a Service(PaaS)",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": {
+				"part": [
+					"Azure Site Recovery provides",
+					"for virtual machines."
+				]
+			},
+			"options": {
+				"option": [
+					"fault tolerance",
+					"disaster recovery",
+					"elasticity",
+					"high availability"
+				]
+			},
+			"answer": "fault tolerance",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": {
+				"part": [
+					"",
+					"is a desktop and application virtualization service that enables the use of a cloud-hosted version of Windows from any location"
+				]
+			},
+			"options": {
+				"option": [
+					"An availability set",
+					"Azure Spot Virtual Machines",
+					"Azure Virtual Desktop",
+					"Azure Virtual Machine Scale Sets"
+				]
+			},
+			"answer": "Azure Virtual Desktop",
+			"_type": "CompleteSentence"
+		},
+		{
+			"text": "What are two characteristics of the public cloud? Each correct answer presents a complete solution.\n      NOTE: Each correct selection is worth one point.",
+			"options": {
+				"option": [
+					"dedicated hardware",
+					"unsecured connections",
+					"limited storage",
+					"metered pricing",
+					"self-service management"
+				]
+			},
+			"answer": {
+				"option": [
+					"metered pricing",
+					"self-service management"
+				]
+			},
+			"_type": "MultipleAnswer"
+		}
+	]
+
+}

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>3a4f8ecd-0db5-4b60-b4d3-e0940c298ef4</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0"/>
+        <PackageReference Include="AspNetCoreRateLimit" Version="5.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.8"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <PackageReference Include="Serilog" Version="4.3.0"/>
+        <PackageReference Include="Serilog.AspNetCore" Version="9.0.0"/>
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.3"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Quiz.ApplicationLayer\Quiz.ApplicationLayer.csproj"/>
+        <ProjectReference Include="..\Quiz.DomainLayer\Quiz.DomainLayer.csproj"/>
+        <ProjectReference Include="..\Quiz.PersistenceLayer\Quiz.PersistenceLayer.csproj"/>
+        <ProjectReference Include="..\Quiz.Shared\Quiz.Shared.csproj"/>
+    </ItemGroup>
+
+</Project>

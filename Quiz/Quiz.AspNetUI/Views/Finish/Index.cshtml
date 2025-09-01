@@ -1,0 +1,43 @@
+﻿@model Quiz.DomainLayer.Entities.Statistics
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Finish/Index.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+@if (Model.IsPassed)
+{
+    <div class="Middle Accepted">
+        <img src="https://media.licdn.com/dms/image/v2/D4E10AQGGBRbbU5WHeA/image-shrink_800/B4EZg3in.uGYAg-/0/1753278480886?e=2147483647&v=beta&t=NvYtdJZA7-Z45mluDN6cDVBQivW7mR0MtyQ5_ldf5uA">
+        <p class="text-center">The test was finalized. You were declared ACCEPTED!<br/>
+            Statistics:<br/>
+            Total number of questions: @Model.NumberOfQuestions<br/>
+            Number of correct answers: @Model.CorrectAnswers<br/>
+            Number of wrong answers: @Model.WrongAnswers<br/></p>
+    </div>
+}
+else
+{
+    <div class="Middle Rejected">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQphE6iCU3u7QjByOcQ0m9zl16vPE7xAoTY4boRCY2l7GXrplBu">
+        <p class="text-center">The test was finalized. You were declared REJECTED!<br/>
+            Statistics:<br/>
+            Total number of questions: @Model.NumberOfQuestions<br/>
+            Number of correct answers: @Model.CorrectAnswers<br/>
+            Number of wrong answers: @Model.WrongAnswers<br/></p>
+    </div>
+}
+    
+</body>
+</html>
