@@ -3,6 +3,9 @@ using Quiz.Shared.Interfaces;
 
 namespace Quiz.WebApi.HealthChecks;
 
+/// <summary>
+/// This class checks if the appsettings.json file has valid configuration values.
+/// </summary>
 public class AppSettingsFile : IHealthCheck
 {
     private readonly IConfiguration _configuration;

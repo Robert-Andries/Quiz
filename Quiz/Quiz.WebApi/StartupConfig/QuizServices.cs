@@ -6,6 +6,9 @@ namespace Quiz.WebApi.StartupConfig;
 
 public static class QuizServices
 {
+    /// <summary>
+    /// Adds API versioning to the service collection.
+    /// </summary>
     public static void AddQuizVersioning(this IServiceCollection services)
     {
         services.AddApiVersioning(opts =>
@@ -16,6 +19,9 @@ public static class QuizServices
         });
     }
 
+    /// <summary>
+    /// Adds rate limiting services to the service collection.
+    /// </summary>
     public static void AddQuizRateLimiting(this WebApplicationBuilder builder)
     {
         builder.Services.AddMemoryCache();
@@ -27,6 +33,9 @@ public static class QuizServices
         builder.Services.AddInMemoryRateLimiting();
     }
 
+    /// <summary>
+    /// Adds health checks to the service collection.
+    /// </summary>
     public static void AddHealthChecks(this WebApplicationBuilder builder)
     {
         builder.Services.AddHealthChecks()
