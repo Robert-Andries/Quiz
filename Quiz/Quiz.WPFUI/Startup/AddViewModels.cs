@@ -7,6 +7,9 @@ namespace Quiz.WPFUI.Startup;
 
 public static class AddViewModels
 {
+    /// <summary>
+    /// Adds the necessary view models and navigation store for quiz functionality to the service collection.
+    /// </summary>
     public static IServiceCollection AddQuizViewModels(this IServiceCollection service)
     {
         service.AddScoped<INavigationStore, NavigationStore>();

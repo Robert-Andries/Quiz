@@ -2,6 +2,9 @@
 
 internal static class AddHttpClients
 {
+    /// <summary>
+    /// Adds named HTTP clients to the DI container.
+    /// </summary>
     internal static void AddQuizHttpClients(this WebApplicationBuilder builder)
     {
         builder.Services.AddHttpClient("apiBase",

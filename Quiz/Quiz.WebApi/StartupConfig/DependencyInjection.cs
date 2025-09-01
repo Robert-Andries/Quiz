@@ -8,6 +8,9 @@ namespace Quiz.WebApi.StartupConfig;
 
 public static class DependencyInjection
 {
+    /// <summary>
+    /// Adds dependency injection for the application.
+    /// </summary>
     public static void AddDependencyInjection(this WebApplicationBuilder builder)
     {
         builder.Services.Configure<QuizSettings>(

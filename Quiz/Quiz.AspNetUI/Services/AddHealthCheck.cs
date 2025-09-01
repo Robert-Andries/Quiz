@@ -4,6 +4,9 @@ namespace Quiz.AspNetUI.Services;
 
 internal static class AddHealthCheck
 {
+    /// <summary>
+    /// Adds health check service to the DI container.
+    /// </summary>
     internal static async Task AddSelfHealthCheck(this WebApplicationBuilder builder)
     {
         var apiBase = builder.Configuration["Api:BaseUrl"];
