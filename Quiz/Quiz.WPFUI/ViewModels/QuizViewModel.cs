@@ -100,6 +100,7 @@ public class QuizViewModel : BaseViewModel
         if (Quiz.IsComplete)
         {
             QuestionText = "Sit tight, calculating results...";
+            QuestionsDtos.Clear();
             while (await Statistics.GetStatistics(Client, Quiz) == false)
                 await Task.Delay(3000);
             NavigationStore.NavigateTo<FinishViewModel>();

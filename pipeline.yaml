@@ -1,0 +1,80 @@
+pool:
+  name: Default 
+  demands:
+    - java 
+    - docker
+
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+jobs:
+  - job: 'Integration'
+    steps:
+    - task: SonarCloudPrepare@3
+      inputs:
+        SonarQube: 'Sonarqube conn'
+        organization: 'robisca'
+        scannerMode: 'dotnet'
+        projectKey: 'robisca_Azure-AZ900-Quiz'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore nuget packages'
+      inputs:
+        command: 'restore'
+        projects: '**\*.sln'
+        arguments: '--locked-mode'
+    - task: DotNetCoreCLI@2
+      displayName: 'Build Project'
+      inputs:
+        command: 'build'
+        projects: '**\*.sln'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Unit Tests'
+      inputs:
+        command: test
+        projects: '**\*.csproj'
+        arguments: '--configuration $(BuildConfiguration) --collect "XPlat Code Coverage"'
+    
+    - task: PublishCodeCoverageResults@1
+      displayName: 'Publish code coverage'
+      inputs:
+        codeCoverageTool: 'JaCoCo'
+        summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
+        reportDirectory: '$(Build.ArtifactStagingDirectory)/CodeCoverag'
+    
+    - task: Snyk.snyk-security-scan.custom-build-release-task.SnykSecurityScan@1
+      displayName: 'Snyk scan for open source vulnerabilities'
+      inputs:
+        serviceConnectionEndpoint: 'Anyk api'
+        targetFile: 'Quiz\QuizSolution.sln'
+      continueOnError: true
+
+    - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@3
+      displayName: 'Run Code Analysis'
+      inputs:
+        jdkversion: 'JAVA_HOME_21_X64'
+
+    - task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@3
+      displayName: 'Publish Quality Gate Result'
+
+        
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish'
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)/drop'
+        
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publishing Artifacts'
+      inputs:
+        PathtoPublish: $(Build.ArtifactStagingDirectory)
+        ArtifactName: 'drop'
