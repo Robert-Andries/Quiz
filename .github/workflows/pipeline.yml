@@ -64,7 +64,7 @@ jobs:
 
     # 3. Restore NuGet packages
     - name: Restore
-      run: dotnet restore ${{ env.Solution_Name }}
+      run: dotnet restore ${{ env.Solution_Name }} /p:EnableWindowsTargeting=true
         
     - name: Snyk Security Scan
       uses: snyk/actions@0.4.0
