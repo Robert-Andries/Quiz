@@ -49,6 +49,7 @@ jobs:
 
   snyk-scan:
     runs-on: ubuntu-latest
+    environment: SNYK_TOKENS
     steps:
       # 1. Checkout the code
     - name: Checkout
