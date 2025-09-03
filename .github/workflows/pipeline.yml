@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: QuizSolution.sln   # Your solution file
+      Solution_Name: Quiz/QuizSolution.sln   # Your solution file
       Test_Project_Path: Quiz           # Path to your test project if you want to run only tests from there
 
     steps:
