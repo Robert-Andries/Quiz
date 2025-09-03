@@ -35,6 +35,17 @@ jobs:
     - name: Restore
       run: dotnet restore $env:Solution_Name
 
+    # 3.5. Run Snyk to check for vulnerabilities
+    - name: Snyk Security Scan
+      uses: snyk/actions@0.4.0
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        command: monitor
+        args: --severity-threshold=medium
+        json: true
+          
+
     # 4. Build the solution
     - name: Build
       run: dotnet build $env:Solution_Name --configuration $env:Configuration --no-restore
