@@ -1,59 +1,33 @@
-name: .NET Core Desktop
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
 jobs:
-  build:
-    strategy:
-      matrix:
-        configuration: [Debug, Release]
-
+  build-windows:
     runs-on: windows-latest
-
-    env:
-      Solution_Name: Quiz/QuizSolution.sln   # Your solution file
-      Test_Project_Path: Quiz           # Path to your test project if you want to run only tests from there
-
     steps:
-    # 1. Checkout the code
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      - run: dotnet restore
+      - run: dotnet build
+      - run: dotnet test
 
-    # 2. Install .NET SDK
-    - name: Install .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 9.0.x
-
-    # 3. Restore NuGet packages
-    - name: Restore
-      run: dotnet restore $env:Solution_Name
-
-    # 3.5. Run Snyk to check for vulnerabilities
-    - name: Snyk Security Scan
-      uses: snyk/actions@0.4.0
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      with:
-        command: monitor
-        args: --severity-threshold=medium
-        json: true
-          
-
-    # 4. Build the solution
-    - name: Build
-      run: dotnet build $env:Solution_Name --configuration $env:Configuration --no-restore
-      env:
-        Configuration: ${{ matrix.configuration }}
-
-    # 5. Run tests
-    - name: Test
-      run: dotnet test $env:Solution_Name --configuration $env:Configuration --no-build
-      env:
-        Configuration: ${{ matrix.configuration }}
+  snyk-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      - name: Restore
+        run: dotnet restore
+      - name: Snyk Security Scan
+        uses: snyk/actions@0.4.0
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test
+          args: --severity-threshold=medium
+          json: true
