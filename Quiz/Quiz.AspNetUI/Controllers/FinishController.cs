@@ -37,8 +37,9 @@ public class FinishController : Controller
                     new { message = "An internal error has occured! Please try again later." });
             return View(statistics);
         }
-        catch (Exception e)
+        catch (Exception)
         {
+            _logger.LogError("Failed to post quiz data. Response: {ResponseBody}", jsonText);
             return RedirectToAction("Error", "Home",
                 new { message = "An internal error has occured! Please try again later." });
         }

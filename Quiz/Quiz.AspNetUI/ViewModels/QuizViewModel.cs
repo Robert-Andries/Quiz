@@ -1,4 +1,5 @@
-﻿using Quiz.DomainLayer.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+using Quiz.DomainLayer.Entities;
 
 namespace Quiz.AspNetUI.ViewModels;
 
@@ -6,6 +7,8 @@ public class QuizViewModel
 {
     public QuizViewModel()
     {
+        QuizModel = new DomainLayer.Entities.Quiz();
+        CurrentQuestion = new Question();
         SelectedAnswer = new List<bool>();
     }
 
@@ -20,9 +23,13 @@ public class QuizViewModel
             SelectedAnswer.Add(false);
     }
 
+    [Required]
     public int QuizId { get; set; }
+    [Required]
     public DomainLayer.Entities.Quiz QuizModel { get; set; }
+    [Required]
     public Question CurrentQuestion { get; }
+    [Required]
     public int RemainingQuestions { get; private set; }
     public List<bool> SelectedAnswer { get; set; }
 }

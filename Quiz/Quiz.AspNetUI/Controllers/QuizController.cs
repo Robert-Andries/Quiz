@@ -12,7 +12,6 @@ public class QuizController : Controller
     private readonly HttpClient _client;
     private readonly ILogger<QuizController> _logger;
     private readonly QuizUiService _quizUiService;
-    private QuizViewModel _viewModel;
 
     public QuizController(ILogger<QuizController> logger, IHttpClientFactory clientFactory, QuizUiService quizUiService)
     {
@@ -60,8 +59,8 @@ public class QuizController : Controller
             quiz.CurrentQuestion!.Options = quiz.CurrentQuestion.Options.Distinct().ToList();
 
             await _quizUiService.SaveQuiz(quiz);
-            _viewModel = new QuizViewModel(quiz);
-            return View(_viewModel);
+            QuizViewModel viewModel = new QuizViewModel(quiz);
+            return View(viewModel);
         }
         catch (HttpRequestException e)
         {
@@ -109,7 +108,7 @@ public class QuizController : Controller
             return RedirectToAction("Index", "Finish", new { quizId = quiz.Id });
 
         ModelState.Clear();
-        _viewModel = new QuizViewModel(quiz);
-        return View(_viewModel);
+        QuizViewModel viewModel = new QuizViewModel(quiz);
+        return View(viewModel);
     }
 }
