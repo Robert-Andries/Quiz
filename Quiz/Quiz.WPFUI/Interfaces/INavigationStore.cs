@@ -7,6 +7,6 @@ namespace Quiz.WPFUI.Interfaces;
 /// </summary>
 public interface INavigationStore
 {
-    public BaseViewModel? CurrentViewModel { get; set; }
+    public BaseViewModel CurrentViewModel { get; set; }
     public void NavigateTo<TViewModel>() where TViewModel : BaseViewModel;
 }

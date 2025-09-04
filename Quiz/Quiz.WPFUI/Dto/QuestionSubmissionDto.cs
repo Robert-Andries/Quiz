@@ -7,7 +7,7 @@ namespace Quiz.WPFUI.Dto;
 /// </summary>
 public class QuestionSubmissionDto : ObservableObject
 {
-    private string _optionText;
+    private string _optionText = String.Empty;
     private bool _isChecked;
 
     public string OptionText

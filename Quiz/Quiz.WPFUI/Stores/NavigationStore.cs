@@ -22,6 +22,7 @@ public class NavigationStore : ObservableObject, INavigationStore
         get => _currentViewModel;
         set
         {
+            if (_currentViewModel == value) return;
             _currentViewModel = value;
             OnPropertyChanged();
         }

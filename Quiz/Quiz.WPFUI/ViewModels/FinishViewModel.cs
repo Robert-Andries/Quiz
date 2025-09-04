@@ -1,4 +1,5 @@
-﻿using Quiz.DomainLayer.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+using Quiz.DomainLayer.Entities;
 using Quiz.WPFUI.Interfaces;
 using Quiz.WPFUI.Models;
 
@@ -6,7 +7,7 @@ namespace Quiz.WPFUI.ViewModels;
 
 public class FinishViewModel : BaseViewModel
 {
-    private string _finalMessage;
+    private string _finalMessage = string.Empty;
 
     public FinishViewModel(INavigationStore navigationStore, Statistics statistics) : base(navigationStore)
     {
@@ -15,6 +16,7 @@ public class FinishViewModel : BaseViewModel
     }
 
     #region Properties
+    [Required]
     public string FinalMessage
     {
         get => _finalMessage;

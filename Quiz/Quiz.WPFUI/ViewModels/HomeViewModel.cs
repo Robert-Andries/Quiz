@@ -9,7 +9,7 @@ namespace Quiz.WPFUI.ViewModels;
 
 public class HomeViewModel : BaseViewModel
 {
-    private string _welcomeMessage;
+    private string _welcomeMessage = String.Empty;
     private readonly HttpClient _baseClient;
     private readonly HttpClient _quizClient;
     private DomainLayer.Entities.Quiz _quiz;

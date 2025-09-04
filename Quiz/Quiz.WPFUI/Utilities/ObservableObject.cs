@@ -22,7 +22,7 @@ public class ObservableObject : INotifyPropertyChanged
     /// This method is typically used within property setters to notify listeners about changes in property values.
     /// The optional parameter 'propertyName' is automatically inferred by the compiler if not explicitly provided.
     /// </remarks>
-    public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    public void OnPropertyChanged([CallerMemberName] string propertyName = "")
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }

@@ -30,7 +30,7 @@ public static class Extensions
             JsonConvert.PopulateObject(content, statistics);
             return true;
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return false;
         }

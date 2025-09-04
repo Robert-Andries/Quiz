@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Windows.Input;
 using Quiz.DomainLayer.Entities;
 using Quiz.DomainLayer.Value_Objects;
@@ -13,9 +12,9 @@ namespace Quiz.WPFUI.ViewModels;
 public class QuizViewModel : BaseViewModel
 {
     #region Private Fields
-    private string _questionNumber;
-    private List<QuestionSubmissionDto> _questionsDtos;
-    private string _questionText;
+    private string _questionNumber = String.Empty;
+    private List<QuestionSubmissionDto> _questionsDtos = new();
+    private string _questionText = String.Empty;
     #endregion
     
     public QuizViewModel(INavigationStore navigationStore, DomainLayer.Entities.Quiz quiz, Statistics statistics,
@@ -116,7 +115,7 @@ public class QuizViewModel : BaseViewModel
     #region Methods
     private void ReloadDto()
     {
-        QuestionsDtos = Quiz.CurrentQuestion.Options
+        QuestionsDtos = Quiz.CurrentQuestion!.Options
             .Distinct()
             .Select(opt => new QuestionSubmissionDto
             {
