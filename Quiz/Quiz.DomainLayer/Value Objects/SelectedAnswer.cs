@@ -4,6 +4,7 @@ public class SelectedAnswer
 {
     public SelectedAnswer()
     {
+        SelectedAnswers = new List<int>();
     }
 
     public SelectedAnswer(int questionId, List<int> selectedAnswers)

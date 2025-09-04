@@ -6,6 +6,7 @@ public class Question
     {
         Options = new List<string>();
         CorectOption = new List<int>();
+        Text  = string.Empty;
     }
 
     public Question(int id, string text, string? textSecond, List<string> options, List<int> corectOption,
