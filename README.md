@@ -28,7 +28,7 @@ The Persistence Layer has been moved higher up in the hierarchy, between Applica
 This project is designed to work with SQL databases. Although it is possible to use any storage method with minimal modification due to use of Repository Pattern.
 Only one table is needed for the entire app, the "Question" table which needs to have the following collumns:
 #### ID (int, primary key)
-      - it self explanatory
+      - It is self explanatory
 #### Text (nvarchar)
       - Stores the question itself
 #### TextSecond (nvarchar, nullable)
