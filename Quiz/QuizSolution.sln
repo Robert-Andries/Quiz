@@ -14,9 +14,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.AspNetUI", "Quiz.AspNe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.WPFUI", "Quiz.WPFUI\Quiz.WPFUI.csproj", "{776B9087-2A51-44D8-BBBE-D92A1180DD43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Tests", "Quiz.Tests\Quiz.Tests.csproj", "{A77B465F-A9C5-438A-A901-D76D1593722C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.UnitTests", "Quiz.UnitTests\Quiz.UnitTests.csproj", "{A77B465F-A9C5-438A-A901-D76D1593722C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Shared", "Quiz.Shared\Quiz.Shared.csproj", "{B3B07B68-7F1B-4E6C-890A-B0EC546B4496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.ApiTests", "Quiz.ApiTests\Quiz.ApiTests.csproj", "{7A6CBEB7-5989-432E-9D44-6EACA0C25062}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{B3B07B68-7F1B-4E6C-890A-B0EC546B4496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3B07B68-7F1B-4E6C-890A-B0EC546B4496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3B07B68-7F1B-4E6C-890A-B0EC546B4496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6CBEB7-5989-432E-9D44-6EACA0C25062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6CBEB7-5989-432E-9D44-6EACA0C25062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6CBEB7-5989-432E-9D44-6EACA0C25062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6CBEB7-5989-432E-9D44-6EACA0C25062}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F372BDED-5F7B-4C4E-9491-17E0A0157000} = {1044A0EE-2B2D-4074-831A-691C3D599EE8}
