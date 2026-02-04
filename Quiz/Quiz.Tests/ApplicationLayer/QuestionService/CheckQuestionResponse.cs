@@ -15,7 +15,6 @@ public class CheckQuestionResponse
         // Arrange
         var mockRepository = new Mock<IQuestionRepository>();
         var questionService = new Quiz.ApplicationLayer.Services.QuestionService(mockRepository.Object);
-
         // Act & Assert
         await Assert.ThrowsAsync<ArgumentNullException>(() => questionService.CheckQuestionResponse(null!));
     }
@@ -29,6 +28,7 @@ public class CheckQuestionResponse
         var answer = new SelectedAnswer { QuestionId = 1, SelectedAnswers = new List<int> { 1 } };
 
         mockRepository.Setup(repo => repo.GetQuestionById(It.IsAny<int>())).ReturnsAsync((Question)null!);
+        
 
         // Act & Assert
         await Assert.ThrowsAsync<ArgumentException>(() => questionService.CheckQuestionResponse(answer));

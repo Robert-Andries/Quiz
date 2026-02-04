@@ -40,11 +40,12 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
         c.RoutePrefix = string.Empty;
     });
+    app.ApplyMigrations();
 }
 
 app.MapHealthChecks("/health");
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseResponseCaching();
 

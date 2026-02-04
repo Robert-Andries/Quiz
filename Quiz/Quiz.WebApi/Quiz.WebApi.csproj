@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>3a4f8ecd-0db5-4b60-b4d3-e0940c298ef4</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,6 +25,12 @@
         <ProjectReference Include="..\Quiz.DomainLayer\Quiz.DomainLayer.csproj"/>
         <ProjectReference Include="..\Quiz.PersistenceLayer\Quiz.PersistenceLayer.csproj"/>
         <ProjectReference Include="..\Quiz.Shared\Quiz.Shared.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>
