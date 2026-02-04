@@ -27,7 +27,7 @@ public class Quiz
     public bool IsComplete { get; set; }
     public int NumberOfQuestions => Questions.Count();
     public int RemainingQuestions => Questions.Count() - CurentQuestionIndex - 1;
-    public List<Question> Questions { get; }
+    public List<Question> Questions { get; set; }
 
     public Question? CurrentQuestion =>
         Questions.Count() > 0 && CurentQuestionIndex >= 0 && CurentQuestionIndex < Questions.Count()
