@@ -1,47 +1,96 @@
-# Quiz
+# Quiz Application
 
-## Introduction
-A dynamic, cross-platform solution for knowledge assessment. This quiz generator features both a responsive web portal and a native desktop application, providing universal access. Users receive a fresh, randomly generated quiz from a question database every time. After completion the user gets a performance report based on answers they give.
+A dynamic, cross-platform solution for knowledge assessment, featuring a Web Portal (ASP.NET Core), Desktop App (WPF), and Web API.
 
-## Feautres
-### Core feautres
-  - Random question selection
-  - Calculation of statistics and scoring
-  - State management and validation
-  - Multi platform support (web portal + desktop app)
-### Data Handling and Security
-  - SQL data base support
-  - 100% code coverage (for bussiness logic in Aplication Layer)
-  - API Rate limiting and health checks
-  - Vulnerability checking assured by Snyk (SAST via CI pipeline from Github)
-### Ways to interact
-  - Web
-  - Desktop app
-  - Api
+## Overview
 
-## Tehnical Aspects
-### Architecture
-This project is build using an updated version of Layered Architecture.
-The Persistence Layer has been moved higher up in the hierarchy, between Application Layer and Presentation Layer.
-### Database design
-#### Overview
-This project is designed to work with SQL databases. Although it is possible to use any storage method with minimal modification due to use of Repository Pattern.
-Only one table is needed for the entire app, the "Question" table which needs to have the following collumns:
-#### ID (int, primary key)
-      - It is self explanatory
-#### Text (nvarchar)
-      - Stores the question itself
-#### TextSecond (nvarchar, nullable)
-      - Store the second part of some types of questions
-      - Exemple: "If your language supports ______, you don t have to manage dealocation of memory." The second part comes after "_____"
-#### Options (nvarchar)
-      - Stores the options for that questions
-#### CorrectOption (nvarchar)
-      - Stores the indices of correct options (first option is 0 and the last is size-1)
-#### Type (int)
-      - Stores the type of the question.
-      - There are 2 values that this field can get:
-        - 0 -> Choice
-          - If the question is simple question (e.g. "What day is today?" / "Which of the following plants can survive in the dessert?", etc.)
-        - 1 -> Complete Empty Space
-          - Is used if the question options need to match the Question Text to be correct (e.g. "_____ is the 3rd day of the week)
+This application serves as a dynamic quiz generator. Users receive a fresh, randomly generated quiz from a question database every time. After completion, the user gets a performance report based on the answers they give.
+
+Key features include:
+- **Quiz Generation**: Random question selection with state management and validation.
+- **Scoring**: Calculation of statistics and scoring after quiz completion.
+- **Cross-Platform Access**: Support for Web, Desktop (WPF), and API interactions.
+- **Security & Reliability**: API Rate limiting, health checks, and CI pipeline SAST scanning.
+
+## Technical Architecture
+
+The solution (`QuizSolution.sln`) uses an updated version of Layered Architecture where the Persistence Layer is positioned between the Application and Presentation layers. The main projects include:
+
+1. **Quiz.DomainLayer**: The core of the system containing entities, models (e.g., `Question`), and domain logic.
+2. **Quiz.ApplicationLayer**: Application business logic, maintaining 100% code coverage.
+3. **Quiz.PersistenceLayer**: Infrastructure and data access layer, utilizing Entity Framework Core and the Repository pattern.
+4. **Quiz.Shared**: Shared resources and utilities used across different layers.
+5. **Presentation**:
+   - **Quiz.AspNetUI**: Responsive web portal.
+   - **Quiz.WPFUI**: Native desktop client.
+   - **Quiz.WebApi**: RESTful API for external or decoupled consumption.
+
+### Tech Stack
+- **Framework**: .NET 9.0
+- **Database**: SQL Server
+- **ORM**: Entity Framework Core 9
+- **Architecture**: Layered Architecture, Repository Pattern
+- **Testing**: xUnit, FluentAssertions, Moq, Coverlet
+- **CI Pipeline**: GitHub Actions (Build, Test, Snyk SAST Scan)
+
+## Setup Instructions
+
+### Prerequisites
+- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
+- SQL Server
+- A preferred IDE (Visual Studio 2022, JetBrains Rider, or VS Code)
+
+### Installation
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/Quiz.git
+    cd Quiz
+    ```
+
+2.  **Configure Database**:
+    Update the connection string in the `appsettings.json` file of the API/UI projects.
+
+3.  **Apply Migrations**:
+    Open a terminal at the solution root and update the database:
+    ```powershell
+    dotnet ef database update --project "Quiz\Quiz.PersistenceLayer" --startup-project "Quiz\Quiz.WebApi"
+    ```
+
+4.  **Run the Application**:
+    - **Web API**: `dotnet run --project "Quiz\Quiz.WebApi"`
+    - **Web Portal**: `dotnet run --project "Quiz\Quiz.AspNetUI"`
+    - **Desktop**: Open the solution in Visual Studio and set `Quiz.WPFUI` as the startup project.
+
+## Database Design
+
+The project is designed to work with SQL databases, but can easily be adapted to other storage methods due to the Repository Pattern. It primarily relies on a `Question` table which includes:
+
+- **ID** (int): Primary key.
+- **Text** (nvarchar): The main question text.
+- **TextSecond** (nvarchar, nullable): Secondary text (e.g., text coming after an empty space in fill-in-the-blanks).
+- **Options** (nvarchar): Available options for the question.
+- **CorrectOption** (nvarchar): Indices of the correct options.
+- **Type** (int): Question type identifier.
+  - `0`: **Choice** (Standard multiple-choice question).
+  - `1`: **Complete Empty Space** (Options must match the text exactly).
+
+## Testing
+
+The solution emphasizes strong testing coverage, achieving 100% coverage for business logic in the Application Layer.
+
+- **Unit Tests**: `dotnet test "Quiz\Quiz.UnitTests"`
+- **Integration/API Tests**: `dotnet test "Quiz\Quiz.ApiTests"`
+
+### Code Coverage
+- **Run Coverage**:
+  ```powershell
+  dotnet test --collect:"XPlat Code Coverage"
+  ```
+
+## CI Pipeline
+
+The project uses GitHub Actions for Continuous Integration:
+- Triggers on `push` and `pull_request` to `main`.
+- Builds the solution across `Debug` and `Release` configurations.
+- Runs the full test suite.
+- Scans for vulnerabilities using **Snyk** (SAST).
